@@ -5,7 +5,7 @@ poisk = []
 spisok_slov = russian.read()
 poisk = spisok_slov.split('\n')
 
-bot = telebot.TeleBot('1925363878:AAGQfndPMvXk1Fe91rkuzp4l3ha9SwaWy74')
+bot = telebot.TeleBot('')
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
