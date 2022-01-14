@@ -4,6 +4,7 @@ spisok_slov = russian.read()
 poisk = spisok_slov.split('\n')
 import telebot
 bot = telebot.TeleBot('1925363878:AAGQfndPMvXk1Fe91rkuzp4l3ha9SwaWy74')
+import os
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -70,7 +71,8 @@ def get_text_messages(message):
 
     
 
-bot.polling(none_stop=True, interval=0)
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
 
 
 
