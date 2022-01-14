@@ -1,8 +1,10 @@
+import bs4
+import telebot
 russian = open(r'russian2.txt', encoding='utf-8')
 poisk = []
 spisok_slov = russian.read()
 poisk = spisok_slov.split('\n')
-import telebot
+
 bot = telebot.TeleBot('1925363878:AAGQfndPMvXk1Fe91rkuzp4l3ha9SwaWy74')
 
 @bot.message_handler(content_types=['text'])
